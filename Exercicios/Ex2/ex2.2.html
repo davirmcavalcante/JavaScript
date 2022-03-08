@@ -37,10 +37,12 @@
           'Estou aprendendo ' + s - Usa concatenação.
           `Estou aprendendo ${s}` - Usa template string. O "${}", chama-se place holder.
           Logo o alert ficaria dessa forma: window.alert(`A soma entre ${n1} e ${n2} é igual a ${s}`)
+
           Para formatação de strings, temos:
           s.lenght - diz quantos caracteres a string tem (tamanho).
           s.toUpperCase() - Coloca tudo em maiúsculas.
           s.toLowerCase() - Coloca tudo em minúsculas.
+
           Para formatação de números temos:
           Ex: var n = 1545.5  
           n.toFixed(x) - Fixa o número em x casas decimais. Ex: n.toFixed(2)
@@ -49,7 +51,47 @@
           Ex: n.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
               n.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'})
               n.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'}) */
-       
+
+       /* Operadores: aritméticos (+, -, *, /, %, **), atribuição, relacionais (<, >, <=, >=, ==, !=),
+        lógicos (! - negação, && - conjunção, || - disjunção), ternários (teste ? true : false).
+
+        a) aritméticos (retornam valores aritméticos): ex:
+        5+2=7, 5-2=3, 5*2=10 (multiplicação), 5/2=2.5, 5%2=1(mód, ou módulo - resto da divisão de 5 por 2) , 5**2=25 (potenciação, 5 elevado a 2).
+        Ordem de Precedência: () > ** > *, /, % > +, -.
+
+        b) atribuição: 
+        atribuição simples: ex:
+        var a = 5+3 = 8, var b = a%5 = 3, var c = 5 * b ** 2 = 45, var d = 10 - a / 2 = 6, var e = 6*2/d = 2, var f = b % e + 4/e = 3.
+        autoatribuições: ex:
+        var n = 3
+        n = n+4 (ou n += 4), n = n-5 (ou n -= 5), n = n*4 (ou n *= 4), n = n/2 (ou n /= 2), n = n**2 (ou n **= 2), n = n%5 (ou n %= 5).
+        incremento: ex:
+        var x = 5
+        x = x+1 (ou x++, nesse caso, temos o pós-incremento, que primeiro recebe ou mostra x e depois incrementa, ++x, nesse caso, temos o pré-incremento, que incrementa e depois recebe ou mostra x);
+        x = x-1 (ou x--, nesse caso, temos o pós-decremento, que primeiro recebe ou mostra x e depois decrementa, --x, nesse caso, temos o pré-decremento, que decrementa e depois recebe ou mostra x);
+
+        c) relacionais (retornam valores booleanos, true ou false). ex: 
+        5>2: true, 7<4: false, 8>=8: true, 9 <= 7: false, 5 == 5: true, 4!=4: false
+        obs: identidade: 
+        5 == 5: true (dois valores numéricos), 5 == '5': true (o primeiro valor é numérico e o segundo uma string, porém ambos tem a mesma grandeza, o mesmo valor, logo true.), 5 === '5': false (identicos? iguais em valor e em tipo? o primeiro é um número e o segundo uma string, logo não são identicos, ou seja, false. Obs: esse operador é também chamado de igualdade restrita), 5 === 5: true.
+
+        d) lógicos: ex:
+        negação: !true: false; !false: true;
+        conjunção: true && true: true (a única condição que da verdadeiro, todo o resto é falso); true && false: false; false && true: false; false && false: false;
+        disjunção: true || true: true; true || false: true; false || true: true; false || false: false (se apenas um valor for verdadeiro o resultado será verdadeiro, só sera falso se todos os resultados forem falsos)
+        OBS: precedência: aritméticos ((),**, /, +, ...) > relacionais (<, >, <=, ...) > lógicos (! > && > ||)
+
+        e) ternário: ex:
+        var média = 5.5
+        média > 7? 'APROVADO':'REPROVADO'
+        'REPROVADO'
+        var x = 8
+        var res = x % 2 == 0? 5:9
+        x
+        8
+        res
+        5
+
     </script>
 </body>
 </html>
