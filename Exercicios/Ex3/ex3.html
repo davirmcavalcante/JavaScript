@@ -28,7 +28,16 @@
         window.document.write('Está escrito assim: ' + p1.innerText + '<br>') 
         window.document.write('Veja o que temos no segundo parágrafo: ' + p2.innerHTML)
         /* O innerText pega o texto que está dentro de alguma coisa. Obs: o innerText não vem com o texto formatado (com as tags, como negrito), para isso pode-se usar o innerHTML. */
-        /* Note que para saber onde vai escrever ou a que está se referindo, precisamos recorrer à arvore DOM (Document Object M), para selecionar o elemento. No caso, o document está dentro do window (que é o navegador, a janela, como o google chrome), assim como outros elementos; dentro do document, temos html; dentro do html temos o head, o body, etc. E assim sucessivamente. */
+        /* Note que para saber onde vai escrever ou a que está se referindo, precisamos recorrer à árvore DOM (Document Object Model), para selecionar o elemento. No caso, o document está dentro do window (que é o navegador, a janela, como o google chrome), assim como outros elementos; dentro do document, temos html; dentro do html temos o head, o body, etc. E assim sucessivamente. */
+        
+        /* Ex de árvore DOM:
+        window -> location, document, history
+        document -> html
+        html -> head, body
+        head -> meta, title
+        body -> h1, p, div
+        p -> strong */
+
         /* Obs: podemos selecionar os elementos por:
          marca - com o getElementsByTagName()
          Id - com o getElementById()

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos com DOM</title>
+    <style>
+        div#area{
+            font: normal 20pt arial;
+            background: rgba(20, 117, 20, 0.801);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+     <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">Interaja... </div>
+    <script>
+        var a = window.document.getElementById('area')
+        function clicar(){
+            a.innerText = 'Clicou!'
+            a.style.background = 'red'
+        }
+        function entrar(){
+            a.innerText = 'Entrou!'
+        }
+        function sair(){
+            a.innerText = 'Saiu!'
+            a.style.background = 'green'
+        }
+        /* OBS: quando a interação ou alguma coisa do código javascript não funcionar vá na página e use o dev tools, em inspecionar ou ferramentos do desenvolvedor, e procure o erro na parte de console. Na maioria das vezes o erro é uma besteira, algo escrito errado ou faltando ou até algum comentário que foi mal aberto ou mal fechado, porém nada funciona. */
+    </script>
+    </body>
+</html>
