@@ -16,11 +16,33 @@
             text-align: center;
         }
     </style>
+    <!-- 
+        Note: evento DOM é tudo aquilo que pode acontecer determinado elemento e eles podem ser configurados tanto na parte HTML como na parte de JavaScript. Os mais comuns, com o mouse, são:
+        - click: Um botão ou dispositivo apontador foi clicado e solto;
+        - dblclick: Um elemento foi clicado duas vezes em um intervalo de tempo curto;
+        - mousedonw: o mouse, ou dispositivo apontador está pressionando um elemento;
+        - mouseenter: o mouse, ou dispositivo apontador está acima de um elemento que tem um listener ativo;
+        - mouseleave: o mouse, ou dispositivo apontador foi removido do elemento com um listener;
+        - mousemove: o mouse está se movendo enquanto está acima de um elemento com listener;
+        - mouseover: o mouse foi movido para um elemento com um listener, ou em um de seus filhos;
+        - mouseout: o mouse foi removido do elemento, ou de algum filho contendo um listener;
+        - mouseup: o botão do mouse ou dispositivo foi solto;
+        - pointerlockchange: o botão foi bloqueado ou liberado.
+
+        OBS: há muitos outros eventos e eles podem ser estudados ou acessados pesquisando event reference e olhando no site developer.mozilla.org (mdn).
+    -->
 </head>
 <body>
      <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">Interaja... </div>
+     <!-- Note: colocamos o on e o nome do evento, que vai chamar o nome da ação que queremos utilizar. -->
     <script>
-        var a = window.document.getElementById('area')
+        var a = window.document.getElementById('area') /* declaramos uma variável global, ou seja, que pode ser usada em qualquer parte do código. */
+
+        /* OBS: poderíamos ter utilizado o JavaScript para disparar os eventos, através dos listeners, ao invés de usar o HTML. Para isso, basta fazer a declaração abaixo e removê-las da parte html (nesse caso, da div):
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair) */
+
         function clicar(){
             a.innerText = 'Clicou!'
             a.style.background = 'red'
@@ -32,6 +54,12 @@
             a.innerText = 'Saiu!'
             a.style.background = 'green'
         }
+        /* 
+        As funções são um conjunto de linhas (bloco), que só serão executadas quando ocorrer algum evento. Veja como criar uma função:
+        function ação(parâmetros){
+            bloco
+        }
+        */
         /* OBS: quando a interação ou alguma coisa do código javascript não funcionar vá na página e use o dev tools, em inspecionar ou ferramentos do desenvolvedor, e procure o erro na parte de console. Na maioria das vezes o erro é uma besteira, algo escrito errado ou faltando ou até algum comentário que foi mal aberto ou mal fechado, porém nada funciona. */
     </script>
     </body>
