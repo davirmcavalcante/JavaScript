@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background-color: rgba(0, 38, 255, 0.822);
+            color: white;
+            font: normal 18pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div class="msg">Clique em mim</div> <!-- no lugar de class poderíamos ter id, name, etc., como os exemplos mostram alguns exemplos ao final do código. -->
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[0] /* A variável p1 recebe o parágrafo de índice 0, o primeiro parágrafo. */
+        var p2 = window.document.getElementsByTagName('p')[1]
+        var corpo = window.document.body
+
+        p1.style.color = 'blue'
+        corpo.style.background = 'black'
+        window.document.write('Está escrito assim: ' + p1.innerText + '<br>') 
+        window.document.write('Veja o que temos no segundo parágrafo: ' + p2.innerHTML)
+        /* O innerText pega o texto que está dentro de alguma coisa. Obs: o innerText não vem com o texto formatado (com as tags, como negrito), para isso pode-se usar o innerHTML. */
+        /* Note que para saber onde vai escrever ou a que está se referindo, precisamos recorrer à arvore DOM (Document Object M), para selecionar o elemento. No caso, o document está dentro do window (que é o navegador, a janela, como o google chrome), assim como outros elementos; dentro do document, temos html; dentro do html temos o head, o body, etc. E assim sucessivamente. */
+        /* Obs: podemos selecionar os elementos por:
+         marca - com o getElementsByTagName()
+         Id - com o getElementById()
+         nome - com o getElementsByName(), note que quando temos mais de um elemento escrevemos Elements, logo usamos o colchetes no final para indicar a qual elemento nos referimos.
+         classe - com o getElementsByClassName()
+         seletor - com o querySelector() ou querySelectorAll()
+         */
+         /* Ex
+         var d = window.document.getElementById('msg')
+         d.style.background = 'green'
+         d.innerText = 'Estou aguardando' // Veja que escrevemos em cima do que tinha na div.
+         
+         var d = window.document.getElementsByName('msg')[0]
+         d.innerText = 'Olá!' */
+        var d = window.document.querySelector('div.msg') /* note a notação de CSS dentro do parênteses. Para se referir a id usa "#" e para classe usa ".". */ 
+        d.style.background = 'blue'
+    </script>
+
+</body>
+</html>
