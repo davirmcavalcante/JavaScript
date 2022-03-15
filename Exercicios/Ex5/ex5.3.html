@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <title>IBGE</title>
+</head>
+<body>
+    <h1>Sistema de nacionalidades</h1>
+    Digite o país em que você nasceu: <input type="text" name="txtnac" id="txtnac">
+    <input type="button" value="Verificar nacionalidade" onclick="escolher()">
+    <div id="esc"></div>
+    <script>
+        function escolher(){
+            var nac = (window.document.getElementById('txtnac').value) /* Caso não fosse colocado o ".value" dessa forma, para pegar o valor da nacionalidade em nac, seria necessário colocar "nac.value" toda vez que precisasse desse valor, como nas sentenças abaixo, ou criar uma nova variável para pegar o valor que está em nac e poder usar posteriormente. */
+            var esc = window.document.getElementById('esc')
+            esc.innerHTML = `<p>O país que você nasceu foi <strong>${nac}</strong></p>`
+            if(nac == 'Brasil' || nac == 'brasil'){
+                esc.innerHTML += `<p>Você é <strong>Brasileiro(a)</strong></p>`
+            } else{
+                esc.innerHTML += `<p>Você é <strong>Estrangeiro(a)</strong></p>`
+            }
+        }
+    </script>
+</body>
+</html>
