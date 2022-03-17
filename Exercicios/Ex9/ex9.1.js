@@ -5,8 +5,8 @@ console.log(`Nosso vetor inicialmente é o ${num}`)
 
 /* 
 Veja como declarar um vetor (array):
-let num [5, 8, 4]
-         0, 1, 2 : índices
+let num = [5, 8, 4]
+           0, 1, 2 : índices
          
 Para adicionar um valor em uma nova posição podemos usar:
 - num[3] = 6    e então teremos [5, 8, 4, 6].
@@ -39,3 +39,7 @@ if (pos == -1){
 } else{
     console.log(`O valor procurado está na posição ${pos}`)
 }
+
+/* 
+OBS: em JavaScript, os arrays podem conter elementos de diferentes tipos - inteiros, strings, valores lógicos, etc., diferentemente de outras linguagens, pois o array no JS é heterogêneo. A limitação dos arrays aqui é que os indices são fixos, para solucionar isso, pode-se usar objetos em vez de arrays. Os objetos são declarados com chaves ao invés de colchetes. Ex: let amigo = {nome: 'José', sexo: 'M', peso: 85.4, engordar(p){}}
+*/
