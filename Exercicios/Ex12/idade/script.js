@@ -17,43 +17,43 @@ function verificar(){
             gênero = 'Homem'
             if(idade >= 0 && idade < 10){
                 // Criança
-                img.setAttribute('src', '../imagens/crianca-m-400px.png') /* Coloca o atributo src na tag img, endereçando a imagem. */
+                img.setAttribute('src', '../imagens-editadas/crianca-m-400px.png') /* Coloca o atributo src na tag img, endereçando a imagem. */
             } else if(idade < 25){
                 // Jovem
-                img.setAttribute('src', '../imagens/jovem-m-400px.png')
+                img.setAttribute('src', '../imagens-editadas/jovem-m-400px.png')
             } else if(idade < 50){
                 // Adulto
-                img.setAttribute('src', '../imagens/adulto-m-400px.png')
+                img.setAttribute('src', '../imagens-editadas/adulto-m-400px.png')
             } else if(idade < 60){
                 // Quase idoso
-                img.setAttribute('src', '../imagens/idoso-legal-400px.png')
+                img.setAttribute('src', '../imagens-editadas/idoso-legal-400px.png')
             } else if(idade < 80){
                 // Idoso
-                img.setAttribute('src', '../imagens/idoso-niver-400px.png')
+                img.setAttribute('src', '../imagens-editadas/idoso-niver-400px.png')
             } else{
                 // Muito idoso
-                img.setAttribute('src', '../imagens/idoso-demais-400px.png')
+                img.setAttribute('src', '../imagens-editadas/idoso-demais-400px.png')
             }
         } else if(fsex[1].checked){
             gênero= 'Mulher'
             if(idade >= 0 && idade < 10){
                 // Criança
-                img.setAttribute('src', '../imagens/crianca-f-400px.png')
+                img.setAttribute('src', '../imagens-editadas/crianca-f-400px.png')
             } else if(idade < 25){
                 // Jovem
-                img.setAttribute('src', '../imagens/jovem-f-400px.png')
+                img.setAttribute('src', '../imagens-editadas/jovem-f-400px.png')
             } else if(idade < 50){
                 // Adulta
-                img.setAttribute('src', '../imagens/adulta-f-400px.png')
+                img.setAttribute('src', '../imagens-editadas/adulta-f-400px.png')
             } else if(idade < 60){
                 // Quase idosa
-                img.setAttribute('src', '../imagens/idosa-ruiva-400px.png')
+                img.setAttribute('src', '../imagens-editadas/idosa-ruiva-400px.png')
             } else if(idade < 70){
                 // Idosa
-                img.setAttribute('src', '../imagens/idosa-taca-400px.png')
+                img.setAttribute('src', '../imagens-editadas/idosa-taca-400px.png')
             } else{
                 // Muito idosa
-                img.setAttribute('src', '../imagens/idosa-lingua-400px.png')
+                img.setAttribute('src', '../imagens-editadas/idosa-lingua-400px.png')
             }
         }
         res.style.textAlign = 'center'

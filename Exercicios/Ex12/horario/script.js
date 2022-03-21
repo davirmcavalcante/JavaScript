@@ -8,15 +8,15 @@ function carregar(){
     msg.innerHTML = `Agora são ${hora} horas.`
     if(hora >= 0 && hora < 12){
         //BOM DIA!
-        img.src = '../imagens/fotomanha-400x284.png'
+        img.src = '../imagens-editadas/fotomanha-400x284.png'
         document.body.style.background = '#7ec1f7'
     } else if(hora >= 12 && hora < 18){
         //BOA TARDE!
-        img.src = '../imagens/fototarde-400x284.png'
+        img.src = '../imagens-editadas/fototarde-400x284.png'
         document.body.style.background = '#ff8a22'
     } else{
         //BOA NOITE!
-        img.src = '../imagens/fotonoite-400x284.png'
+        img.src = '../imagens-editadas/fotonoite-400x284.png'
         document.body.style.background = '#012537'
     }
 }
