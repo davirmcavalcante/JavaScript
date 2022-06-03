@@ -17,10 +17,12 @@
     <h1>Iniciando estudos com DOM</h1>
     <p>Aqui vai o resultado</p>
     <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
-    <div class="msg">Clique em mim</div> <!-- no lugar de class poderíamos ter id, name, etc., como os exemplos mostram alguns exemplos ao final do código. -->
+    <div class="msg">Clique em mim</div> <!-- no lugar de class poderíamos ter id, name, etc., como mostram alguns exemplos ao final do código. -->
     <script>
-        var p1 = window.document.getElementsByTagName('p')[0] /* A variável p1 recebe o parágrafo de índice 0, o primeiro parágrafo. */
+        var p1 = window.document.getElementsByTagName('p')[0] 
+        /* A variável p1 recebe o parágrafo p de índice 0, ou seja, o primeiro parágrafo. */
         var p2 = window.document.getElementsByTagName('p')[1]
+        /* Analogamente, a variável p2 recebe o parágrafo p de índice 1, ou seja, o segundo parágrafo. */
         var corpo = window.document.body
 
         p1.style.color = 'blue'
@@ -28,7 +30,7 @@
         window.document.write('Está escrito assim: ' + p1.innerText + '<br>') 
         window.document.write('Veja o que temos no segundo parágrafo: ' + p2.innerHTML)
         /* O innerText pega o texto que está dentro de alguma coisa. Obs: o innerText não vem com o texto formatado (com as tags, como negrito), para isso pode-se usar o innerHTML. */
-        /* Note que para saber onde vai escrever ou a que está se referindo, precisamos recorrer à árvore DOM (Document Object Model), para selecionar o elemento. No caso, o document está dentro do window (que é o navegador, a janela, como o google chrome), assim como outros elementos; dentro do document, temos html; dentro do html temos o head, o body, etc. E assim sucessivamente. */
+        /* Note que para saber onde vai escrever ou a que está se referindo, precisamos recorrer à árvore DOM (Document Object Model), para selecionar o elemento. No caso, o document está dentro do window (que é o navegador, a janela, como o google chrome), assim como outros elementos; dentro do document, temos o html; dentro do html temos o head, o body, etc. E assim sucessivamente. */
         
         /* Ex de árvore DOM:
         window -> location, document, history

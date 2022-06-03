@@ -44,9 +44,11 @@
           s.toLowerCase() - Coloca tudo em minúsculas.
 
           Para formatação de números temos:
-          Ex: var n = 1545.5  
-          n.toFixed(x) - Fixa o número em x casas decimais. Ex: n.toFixed(2)
-          n.replace("x", "y") - Troca x por y. Ex: n.toFixed(2).replace(".", ",")
+          Sendo var n = 1545.5. 
+          n.toFixed(x) - Fixa o número em x casas decimais. 
+          Ex: n.toFixed(2) mostra 1545.50.
+          n.replace("x", "y") - Troca x por y. 
+          Ex: n.toFixed(2).replace(".", ","), mostra 1545,50.
           n.toLocaleString('lang', {style: 'string', string: 'string'}). 
           Ex: n.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
               n.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'})
@@ -78,8 +80,10 @@
         d) lógicos: ex:
         negação: !true: false; !false: true;
         conjunção: true && true: true (a única condição que da verdadeiro, todo o resto é falso); true && false: false; false && true: false; false && false: false;
-        disjunção: true || true: true; true || false: true; false || true: true; false || false: false (se apenas um valor for verdadeiro o resultado será verdadeiro, só sera falso se todos os resultados forem falsos)
-        OBS: precedência: aritméticos ((),**, /, +, ...) > relacionais (<, >, <=, ...) > lógicos (! > && > ||)
+        disjunção: true || true: true; true || false: true; false || true: true; false || false: false (se apenas um valor for verdadeiro o resultado será verdadeiro, só sera falso se todos os resultados forem falsos).
+        Ordem de Precedência: ! > && > ||.
+
+        OBS: precedência geral: aritméticos ((),**, /, +, ...) > relacionais (<, >, <=, ...) > lógicos (! > && > ||)
 
         e) ternário: ex:
         var média = 5.5

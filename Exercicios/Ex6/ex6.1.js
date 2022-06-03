@@ -8,4 +8,4 @@ if (idade < 16) {
     console.log('Voto obrigatório')
 }
 /* Aqui temos uma estrutura condicional aninhada, ou seja, um condicional dentro de outro.
-Note que o else if (){} poderia ser um else {if(){}}.
+Note que o else if (){} poderia ser um else {if(){}}. */

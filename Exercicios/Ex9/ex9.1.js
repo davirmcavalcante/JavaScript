@@ -5,15 +5,15 @@ console.log(`Nosso vetor inicialmente é o ${num}`)
 
 /* 
 Veja como declarar um vetor (array):
-let num = [5, 8, 4]
-           0, 1, 2 : índices
+let nomeVetor = [valor1, valor2, valor3, ..., valorn]
+                   0,      1,      2,    ...,   n-1 : índices
          
 Para adicionar um valor em uma nova posição podemos usar:
 - num[3] = 6    e então teremos [5, 8, 4, 6].
 - num.push(7) que acrescenta 7 ao final do vetor, e então teremos [5, 8, 4, 6, 7].
 
 Para saber o comprimento, temos:
-- num.length que me dirá quantos elementos o vetor tem. No case, são 5 elementos.
+- num.length que me dirá quantos elementos o vetor tem. No caso, são 5 elementos.
 
 Para ordenação, temos:
 - num.sort() que ordena os elementos em ordem crescente, e então teremos [4, 5, 6, 7, 8]
@@ -31,7 +31,7 @@ console.log(num)
 console.log(`O vetor tem ${num.length} posições`)
 console.log(`O primeiro valor do vetor é ${num[0]}`)
 
-//console.log(`O valor procurado está na posição ${num.indexOf(1)}`)
+//console.log(`O valor 1, procurado, está na posição ${num.indexOf(1)}`)
 
 let pos = num.indexOf(8)
 if (pos == -1){
